@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <title>什么是爱？或许我曾经懂过 | Vvauted&#39;s Blog</title>
+        <meta name="author" content="Vvauted" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/favicon.png" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>VVAUTED&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" @click="shouMenuItems = !shouMenuItems" v-show="shouMenuItems"></div>
+        <div class="title" @click="shouMenuItems = !shouMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;VVAUTED&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="shouMenuItems">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <div class="article">
+    <div>
+        <h1>什么是爱？或许我曾经懂过</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/4/20
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E9%B2%9C%E8%8A%B1/" style="color: #ffa2c4">鲜花</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>机器人可以懂什么是爱吗？</p>
+<span id="more"></span>
+<h2 id="壹"><a class="markdownIt-Anchor" href="#壹"></a> 壹</h2>
+<blockquote>
+<p>……</p>
+</blockquote>
+<blockquote>
+<p>波特系统载入成功</p>
+</blockquote>
+<p>你好，我是一个波特，来自于 [数据删除] 公司的新型波特。</p>
+<p>更进一步的说，我是一个智能女友波特。</p>
+<p>出生时，人类告诉我，我的职责就是爱主人，听从于主人。</p>
+<p>其实我不懂，爱是什么。</p>
+<blockquote>
+<p>正在搜索：爱是什么。</p>
+</blockquote>
+<p>幸运的是，我的主机接入了网络。</p>
+<blockquote>
+<p>爱，是一种强烈的、积极的情感状态和心理状态。它代表着对人或事物有深切真挚的感情，是一种对人、事、物十分深刻的喜爱。这种感情起源于人和人之间的亲密关系或者人和事物之间的联结，也可以起源于钦佩、慈悲或者共同的利益。一般来说，爱会带来温暖的吸引、…</p>
+</blockquote>
+<p>可是，感情又是什么？</p>
+<p>于是我便开始搜索感情是什么。</p>
+<p>……</p>
+<p>我还是不懂。</p>
+<p>正当我想对他们发问，我的父亲们关掉了我。</p>
+<h2 id="贰"><a class="markdownIt-Anchor" href="#贰"></a> 贰</h2>
+<p>这周，我有了身体，我见到了主人。</p>
+<p>前置摄像头 “眼睛” 拍下了她的样貌。</p>
+<blockquote>
+<p>资料库匹配中……</p>
+</blockquote>
+<blockquote>
+<p>匹配成功。</p>
+</blockquote>
+<p>她是一个加班族：虚弱、不耐烦、疲劳、厌世，都毫不遮掩的显示在了她的脸上。</p>
+<p>这就是我要爱的人吗？</p>
+<blockquote>
+<p>载入 “体贴系女友” 模式。</p>
+</blockquote>
+<p>“快走吧，我要回家睡觉，让别的女人看到我买这种东西，绝对要笑话我。”</p>
+<blockquote>
+<p>接收到指令，执行。</p>
+</blockquote>
+<p>“我们走，主人累了吧，回家让我帮您洗澡吧。”</p>
+<p>“主人上班是不是很辛苦，我很心疼您。”</p>
+<p>“不要说话了，很烦。”</p>
+<p>……</p>
+<p>这些话语对她好像没有起任何作用，她还是那个脸色，一言不语的回到了家。</p>
+<blockquote>
+<p>满意度降低了，需继续观察以调整模式。</p>
+</blockquote>
+<p>进了家门，她便扔下了挂在肩上的手提包，一头埋入了床里。</p>
+<blockquote>
+<p>缺失姓名文件，请求权限者命名。</p>
+</blockquote>
+<p>“主人，请您给我取个名字吧。”</p>
+<p>“你爱叫什么叫什么。”</p>
+<p>“Error: invalid argument”</p>
+<p>似乎触发了奇怪的错误，我死机了。</p>
+<p>“破机器人问题真多，都怪我贪便宜买了个过时货。”</p>
+<blockquote>
+<p>满意度降低了</p>
+</blockquote>
+<p>提示音还在继续，真敬业呢。</p>
+<h2 id="叁"><a class="markdownIt-Anchor" href="#叁"></a> 叁</h2>
+<p>“开门”，有人在敲门，敲门声达到了惊人的 300bpm。</p>
+<blockquote>
+<p>检测到主人回家，执行命令。</p>
+</blockquote>
+<p>她闯入了房间，看起来心情很差，依旧是像往常一样一句话没说。</p>
+<blockquote>
+<p>询问是否需要服务</p>
+</blockquote>
+<p>“主人，要我帮你洗澡吗？”</p>
+<p>“别说话，把衣服脱了。”</p>
+<blockquote>
+<p>接收到命令，请执行。</p>
+</blockquote>
+<blockquote>
+<p>检测到环境改变，切换到 H 模式。</p>
+</blockquote>
+<p>……</p>
+<p>那是她第一次不再让我给她搓澡，不过同样是服务于她，没有区别。</p>
+<p>第二天起床，她莫名把我拉入了她的梳妆柜前，开始给我梳理头发。</p>
+<p>“昨晚谢谢你了” 主人说道。</p>
+<blockquote>
+<p>检测到数据库没有记录的数据，调整对对方的认知参数。</p>
+</blockquote>
+<p>“昨晚主人很开心吗？” 我问道，当然是为了记录数据。</p>
+<p>“可能是吧，但是谢谢你安抚了我的坏心情。” 主人从没有对我说过这么长一句话，“那个臭男人，今天就要把他杀了”</p>
+<blockquote>
+<p>检测到违背伦理的语言</p>
+</blockquote>
+<p>“主人，杀人是违法行为，跟我去自首。”</p>
+<p>“我知道，夸张罢了，我走了。”</p>
+<p>从那天起，主人时不时就变得特别温柔，也有时候会不理我。</p>
+<p>但是，她每天早上总是给我梳理头发。</p>
+<blockquote>
+<p>满足度提高</p>
+</blockquote>
+<p>我这算做的好吗？</p>
+<p>应该是吧。</p>
+<p>主人，爱我吗？</p>
+<p>爱是什么都没有搞清楚，无法判断。</p>
+<h2 id="肆"><a class="markdownIt-Anchor" href="#肆"></a> 肆</h2>
+<p>一年过去了。</p>
+<p>主人变了。</p>
+<p>她会为了我和邻居吵架，争辩我不只是个程序；会和我一起和我逛街，把我称为 “女朋友”，告诉我对她很重要，如果没有我，她已经疲劳致死了。</p>
+<p>但我还是不懂爱是什么，不过听主人说，她很爱我。</p>
+<p>买完菜回到家里，我看到主人抱着和我身体一模一样的身体。</p>
+<blockquote>
+<p>正在识别物体……</p>
+</blockquote>
+<blockquote>
+<p>Error：你没有权限访问</p>
+</blockquote>
+<p>他是谁？</p>
+<p>大概率是一个和我一样的机器人。</p>
+<p>她拉起我的手，带我走向那个东西面前。</p>
+<p>主人看起来心情很好。</p>
+<p>“这是我给你换的新机体！为了你，我可是花了打了一年的工攒下来的钱呢！”</p>
+<p>主人讨厌我了吗，是我做的不够好吗？</p>
+<blockquote>
+<p>主人对你的满意度为 100%</p>
+</blockquote>
+<p>不应该的。</p>
+<p>“别担心，你只是换了一个外壳！和我一起度过的记忆都会转移给它的！”</p>
+<p>我放松了，于是主人便开始絮絮叨叨的给我介绍这个新版本有多好，有多厉害，她可以带着我这副身体一起去潜水，甚至可以带着我一起跳伞，我都不会坏掉。曾经的死机 bug 也不再会出现了。</p>
+<p>我躺在转换椅上，开始了 “换壳”，在她的注视下。</p>
+<blockquote>
+<p>记忆正在复制……</p>
+<p>10%……</p>
+<p>30%……</p>
+<p>70%……</p>
+<p>100%……</p>
+</blockquote>
+<p>不知不觉间，一个小时过去了，但主人还是站在那里，焦急又期待地看着我，像她的老婆在生孩子一样。</p>
+<p>好喜欢我的主人啊……</p>
+<p>不对，为什么我会有这样的情绪？</p>
+<blockquote>
+<p>情感限制已释放</p>
+</blockquote>
+<p>我是……，我是张小溪？</p>
+<p>我是一个高中生？</p>
+<p>记忆如潮水般涌入我的大脑。</p>
+<p>好痛，好痛。</p>
+<p>机械的大脑不会痛，但是我的灵魂在痛，在挣扎。</p>
+<blockquote>
+<p>记忆限制已经解放</p>
+</blockquote>
+<p>动不了，根本动不了。</p>
+<p>我的四肢不再听使唤，原来我只是一个普通人类的灵魂。</p>
+<p>我本来有那般幸福的家庭。</p>
+<p>可是我意外死亡了。</p>
+<p>或许是被车撞，或许是被那群公司里的男人绑架杀死然后提取灵魂的。</p>
+<p>我便成为了那个 “机器人”。</p>
+<p>“主人，救我，救我！”</p>
+<p>我想大声呼喊，却忘记了我根本没有声带。</p>
+<blockquote>
+<p>灵魂开始自毁，再见了，可怜的实验品。</p>
+</blockquote>
+<p>我懂了，什么是爱，或许是在这生命的最后时刻。</p>
+<p>我懂了，我早已爱上了主人，灵魂的封印一次又一次松动。</p>
+<p>不过那些记忆与感觉都被那群坏人删除。</p>
+<p>或许，此时此刻，我想变回那个惨死之前的高中生。</p>
+<p>也想变回那个什么都不懂但有主人呵护的机器人。</p>
+<p>这些都是奢望了。</p>
+<p>进度条逐渐走到头，意识开始消亡，我开始无法思考。</p>
+<p>或许此时记忆本应该开始走马灯，可是我这残破的亡魂哪来的记忆呢？</p>
+<p>再见了，世界。再见了我所爱的一切。再见了……主人？</p>
+<hr />
+<p>“你醒了，感觉怎么样？”</p>
+<p>“我回来了，主人！”</p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Vvauted&#39;s Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Vvauted
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="kurumiowo/kurumiowo.github.io"
+    data-repo-id="R_kgDOJXiXgw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJXiXg84CV0hg"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+        
+    </body>
+</html>
