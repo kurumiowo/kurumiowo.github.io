@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <title>完美无缺 | Vvauted 的鲜花站</title>
+        <meta name="author" content="Vvauted" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/favicon.png" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>VVAUTED 的鲜花站</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" @click="shouMenuItems = !shouMenuItems" v-show="shouMenuItems"></div>
+        <div class="title" @click="shouMenuItems = !shouMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;VVAUTED 的鲜花站</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="shouMenuItems">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <div class="article">
+    <div>
+        <h1>完美无缺</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/9/12
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E9%B2%9C%E8%8A%B1/" style="color: #ff7d73">鲜花</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>我恨这个困住我三年的地方，而今天，我要回家了！</p>
+<span id="more"></span>
+<p>​褪去身上蓝白相间的衬衫，我走出了这个六面砖砌的地狱。</p>
+<p>​那里除了白色油漆刷出千篇一律的墙皮，就只剩下鲜红色颜料泼出无规律的油画。</p>
+<p>​恶魔提着斧子，静静的看着我，就在那里看着我。那若隐若现的混乱使看不清祂的脸，我更不敢直接凝视祂，自然不知祂是什么表情，好在我早已习惯了祂的凝视。</p>
+<p>​大门静静的打开，静静的合上，我不再属于这个病痛之地。走在回家的路上，我欢呼，我歌唱，我起舞，我歌颂那全知全能的神！好在这里并非人潮汹涌，只是有些喧闹。“啊，我在想什么呢？” 我狠狠的向自己的脸上扇去 “何必在意这些？就算这里人山人海，我更要载歌载舞。”</p>
+<p>​似乎想起了什么，我痛哭流涕，朝天边跪下，向神明求饶，“神明大人，我绝不会这样了，原谅我吧！不要让我再回到那炼狱！” 眼泪一滴一滴的往下流，天黑了，铁锈味也越来越重，祂终于回答：“你永远不会回那里了，放心吧，孩子。” 祂向我许诺，让我不再残缺。我的肌肉颤抖着，浑身的血管颤抖着，大脑也颤动着。“哈哈哈！祂回话了，祂终于肯回我话了！！！” 我朝家中跑去。</p>
+<p>​外面的世界依然弥漫着那股铁锈味，真是令人怀念。</p>
+<p>​“爸爸，妈妈？弟弟？” 没人回答。我耸了耸肩，似乎家人都已经不在。环顾四周，家里的墙被染成了红色。“若不是我用钥匙打开了门，我大概会认为走错房间了。” 家里变化很大，不过，就算过了三年，我也记得我的房间在哪里。</p>
+<p>​走到那红色的门前，我思绪万千 —— 我终于可以自己开门了。我先天没有双臂，这或许是这三年我唯一的收获，不过，令人讨厌的是，那只是连续残缺的我变为了破碎完整的 —— 相对其他正常人来说 罢了。红色床上的红色被子鼓鼓的，是什么呢？我随手掀开了了被子，看到的是我那个令人喜欢不起来的弟弟，他睡的很死，脸上还残留着干涸了的眼泪，脸上的油漆和墙上的相接。“嗐，原来是你，为什么你在我房间里还变成这般模样？我还以为是我的宝贝猫猫。” 进到那里之前，我定是猫奴，一定是的吧？“怎么天天哭哭哭，我最讨厌你哭了，又失恋了？” 见他不回答，甚至眼皮没有颤动一次，我便擦去他脸庞上的泪水和油漆的混合物，离开了这个房间。</p>
+<p>​关上大门，我想到街上走走。正如我预料的，街上人山人海。自动售卖机吐出了我想喝的饮料，我便这样在街上逛着，跟随人流。”话说为什么这么多人走路都看起来这么不平衡？“ 我找不到原由。就在这悠然之时，有人拍了拍我的肩膀，“薇，你好。” 我无法再分辨这是谁的声音，”你是……“，回过头来，我的心一颤，我还是无法分辨出这是谁，祂的脸上打着属于那恶魔的马赛克。“为什么？？？你到底是谁？？？” “刚刚分别，这就忘记我了吗？” 从祂的话语里听不出任何情绪，更别谈从祂那混乱的脸中看出。祂提着一把斧子，雨水从斧子上流下，“我还是为了你才来这里呢，这么不待见我，我走了，再会。”  祂一眨眼间边消失在了视野中，“别走，你别走！！！”，我崩溃了，“你还未说清你为什么在这！！！你不能走。” 我摊倒在地上。“你没事吧？” 突然来的关心吓了我一跳，我抬起头，是一个又一个马赛克堆砌成的脸。“啊！” 我颤抖着，被混沌颤抖着，被未知颤抖着，被恶魔颤抖着，唯独那双臂没有颤动。“为什么看不清？？？为什么？？？“</p>
+<p>​我向神大吼，“为什么是这样，说好的让我和他人一样完整呢？”，神不语。</p>
+<p>​我推开那一个又一个本质相同的面庞，从人群中挤了出去，跑回了家，缩入了被中。</p>
+<p>​从那天起我再没出过门，也再没出过被中。直到，某一天，强光从窗口照射如我的房间，照射到我的被子上，融化了那布包的棉被，才褪下了我那分离我与月光烤灼的壳子。“是希望吗？” 长着六翼的身影落在了我家后田野的稻草中。“是希望，一定是希望！！！” 我癫狂着，披上斗篷，从后门悄悄的溜出，祈祷不再撞到任何一个 “人”。摆脱那人山人海的闹市区，我狂奔起来，不再关顾那轮不落的月亮的光照， 忍痛扑倒在了祂的身旁。“救救我，救救我！！” 祂一言不发，可是我看到了祂的脸，完美的五官，恰好两对眼睛 —— 正如祂三对翅膀一般对称。“我能看清祂！！！我能看清祂！！！” 我看不清楚这世界，不过难道本来不是这样的吗？这是我能清晰的看到祂的面庞。可是祂似乎并没有看到我，或是不愿理睬我，便踩着我的身体，挥动那翅膀飞走了。</p>
+<p>​一道道光束落下，一个个身影在天空中飞翔，祂们在天空中铸成了城堡，在天空中生活着。</p>
+<p>​“他们一定是天使吧。”，所有人在心中默默念到。“为什么我没有翅膀？我一定是残缺的，这不公平！！！” 在这个公平的世界里，没有人希望自己是残缺的。他们跪下，匍匐倒地，朝着天空吼道 “神啊，请还我公平！我要变得更完整，而不是做那个残缺的！” 时钟嘀嗒，黑夜持续，神吟喃着，似乎在后悔为什么要创造这般麻烦的世界。“那些天使诞生只是一些意外，好吧，我许你们完整！”</p>
+<p>​如今有了六翼，我想着，我一定完整了吧！我赞美神的恩赐，我赞美天使们——虽然我也是天使的一份子了，我歌颂能被知晓的，能被看清楚的一切。我一定要逃离这个地方，这个如地狱一般的地方。我走出家门，月光似乎知道了我要离开，不再烤灼我，天上也再没有见到那些六翼的影子，或许是因为我们相同了吧！他们不再住在天上。走到悬崖边，世界的边界触手可及。“就是这悬崖把我困在这里了啊！” 我的喧动引来不少人观看，“别跳！别跳！” 他们呼喊着。当然的，我看不清他们是谁。但是似乎那马赛克的混沌一改往日的稳定，开始波动起来，不仅是一个人的，而是他们全部的。“不要跳！” 他们大吼，“你离开不了的！不要重蹈覆辙了！”</p>
+<p>​他们一定是在羡慕我，一定是在嫉妒我，我将要改变这一切。</p>
+<p>​我一跃而出。</p>
+<p>​我展开我的翅膀。</p>
+<p>​我展开我的翅膀。</p>
+<p>​我展开我的翅膀。</p>
+<p>​翅膀没有展开。</p>
+<p>我没有翅膀。</p>
+<p>​神在叹息，我朝他怒吼，“我的翅膀呢？”</p>
+<p>​神不语。</p>
+<p>​这一刻，这个世界无比的清晰，我终于注意到了：他们那本属于那肩膀的地方流着血，并没有任何包扎和处理，他们如同不会疼痛一样。</p>
+<p>​我向下跌落。</p>
+<p>​悬崖下堆满了我的尸体。</p>
+<p>​神叹息，“终究是改变不了你呢，为了其他所有人的完整，只能这样了吧”。</p>
+<p>​血水掺杂着雨水映照着，照出的并非我的面庞，而是一团团马赛克。</p>
+<p>​我挣扎着，想打碎这面镜子，直到一份的我变为两份，两份的我变为四份，……。</p>
+<p>​天地间回响着神的声音：“只要拥护神，便能变的完整，为什么要背弃神呢？”</p>
+<p>​人民们歌颂神，赞美神，拥护神，如忘记了刚刚发生的一切一般，他们没有发现那些他们早已失去的东西，但那歌颂一定会持续到他们认为自己不再完美无缺的那一天。</p>
+<p>​可是这一天，真的会再来一次吗？</p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Vvauted 的鲜花站
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Vvauted
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="kurumiowo/kurumiowo.github.io"
+    data-repo-id="R_kgDOJXiXgw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJXiXg84CV0hg"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+        
+    </body>
+</html>
